@@ -2,43 +2,24 @@ package tests.simple;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NegativeTests {
-    
+
     @Test
-    void someTest() {
-        assertTrue(false);
+    void wrongAdditionTest() {
+        assertEquals(5, 2 + 2, "Специально неверный тест: 2 + 2 ≠ 5");
     }
-    
+
     @Test
-    void someTest1() {
-        assertTrue(false);
+    void failedTrueTest() {
+        boolean isActive = false;
+        assertTrue(isActive, "Специально падающий тест: ожидалось true, но false");
     }
-    
+
     @Test
-    void someTest2() {
-        assertTrue(false);
+    void failedNotNullTest() {
+        String nullString = null;
+        assertNotNull(nullString, "Специально падающий тест: объект null");
     }
-    
-    @Test
-    void someTest3() {
-        assertTrue(false);
-    }
-    
-    @Test
-    void someTest4() {
-        assertTrue(false);
-    }
-    
-    @Test
-    void someTest5() {
-        assertTrue(false);
-    }
-    
-    @Test
-    void someTest6() {
-        assertTrue(false);
-    }
-    
 }
